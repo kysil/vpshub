@@ -1,0 +1,29 @@
+# Secrets and private keys
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Environment files
+.env
+.env.*
+
+# WireGuard private configuration
+wireguard/private/
+wireguard/peers/
+
+# Local configuration
+*.local
+config.local.*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
