@@ -188,6 +188,27 @@ Validation should include, where applicable:
 
 Validation results should be reviewed before additional minimization changes are introduced.
 
+## Validated System State
+
+The system minimization process was completed and validated before deployment of additional infrastructure components.
+
+The validated system state includes:
+
+- Removal of unused Cockpit components
+- Removal of unused NFS and RPC components
+- Removal of non-operational kernel crash dump components
+- Rebuilding the active initramfs after package removal
+- Verification that removed NFS and RPC components are no longer present in the active initramfs
+- Verification that no residual NFS RPC filesystem mounts remain after reboot
+- Verification that no unnecessary NFS RPC kernel modules are loaded after reboot
+- Verification that the package database remains consistent
+- Verification that no failed system units remain
+- Verification that required administrative and security services remain operational
+- Verification that network listeners remain limited to expected services
+- Verification that host firewall and remote administrative access remain operational after reboot
+
+The validated minimization state represents the operating system baseline from which additional `vpshub` infrastructure components may be deployed.
+
 ## Security Considerations
 
 System minimization is a security control only when performed deliberately.
